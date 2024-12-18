@@ -1,18 +1,15 @@
-from typing import Union
+from typing import List
 import pandas as pd
 
 class Hypothesis:
-    """
-    
-    """
-    def __init__(self, data: Union[pd.DataFrame, list], alpha: float = 0.05, columns: list = None, is_categorical: bool = False):
+    def __init__(self, 
+                 data: pd.DataFrame, 
+                 columns: List[str],
+                 alpha: float = 0.05,
+                 is_categorical: bool = False):
+        
         self.alpha = alpha
         self.is_categorical = is_categorical
-
-        if isinstance(data, pd.DataFrame):
-            if not columns:
-                raise ValueError("You must specify columns for comparison in a DataFrame.")
-            self.data = [data[col].dropna().tolist() for col in columns]
-        else:
-            self.data = data
+        self.data = data
+        self.columns = columns
 
