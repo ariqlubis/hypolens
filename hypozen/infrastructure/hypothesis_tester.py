@@ -14,6 +14,9 @@ class HypothesisTesting:
         
         
     def run_test(self, hypothesis: Hypothesis) -> TestResult:
+        """
+        Runs the appropriate hypothesis test based on the data type and characteristics.
+        """
         data = hypothesis.data
         
         if not data or len(data) < 2:
