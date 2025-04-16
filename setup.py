@@ -13,7 +13,7 @@ def get_requirements(file_path: str) -> List[str]:
     return requirements
 
 setup(
-    name="hypozen",
+    name="hypolens",
     version="0.1.0",
     description="A library for automated hypothesis testing with parametric and non-parametric methods.",
     author="ariqlubis",
