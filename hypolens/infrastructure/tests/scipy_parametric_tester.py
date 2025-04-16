@@ -1,6 +1,6 @@
 from scipy.stats import ttest_ind
-from hypozen.core.interfaces.tester_interface import TesterInterface
-from hypozen.core.entities.test_result import Result
+from hypolens.core.interfaces.tester_interface import TesterInterface
+from hypolens.core.entities.result import Result
 
 class ScipyParametricTester(TesterInterface):
     def test(self, data1, data2, alpha=0.05) -> Result:

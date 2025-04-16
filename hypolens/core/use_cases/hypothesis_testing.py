@@ -1,7 +1,7 @@
-from hypozen.core.entities.test_result import Result
-from hypozen.core.interfaces.tester_interface import TesterInterface
-from hypozen.core.interfaces.parametric_converter_interface import ParametricConverterInterface
 import pandas as pd
+from hypolens.core.entities.result import Result
+from hypolens.core.interfaces.tester_interface import TesterInterface
+from hypolens.core.interfaces.parametric_converter_interface import ParametricConverterInterface
 
 class HypothesisTesting:
     def __init__(self, tester: TesterInterface, converter: ParametricConverterInterface = None):
